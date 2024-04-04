@@ -156,3 +156,31 @@ urlpatterns = [
     path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
 
+# Descargar template "blog" de bootstrap
+# Link de descarga
+# https://getbootstrap.com/docs/5.3/examples/
+# Tomar la carpeta blog y assets
+# De blog tomar index.html y pegarlo en myfirstapp/templates/myfirstapp/
+# Luego crear una carpeta llamada Static y dentro crear una carpeta llamada myfirstapp e insertar la carpeta assets y los archivos de blog blog.css blog.rtl.css
+
+# En el archivo Settings.py agregar la ruta a los archivos estaticos
+# Ejemplo 
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'myfirstapp' / 'static' / 'myfirstapp' / 'assets',
+    BASE_DIR / 'myfirstapp' / 'static' / 'myfirstapp',
+]
+
+# Modificar el index.html para que llame a las rutas de la forma correcta
+# Primero agregar en la primera linea
+{% load static %}
+
+# Modifica las lineas que llaman a los archivos staticos
+# Ejemplo
+<link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'blog.css' %}" rel="stylesheet">
+<script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+# Ejecutar el proyecto
+python manage.py runserver
