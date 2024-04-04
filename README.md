@@ -160,7 +160,7 @@ urlpatterns = [
 # Link de descarga
 # https://getbootstrap.com/docs/5.3/examples/
 # Tomar la carpeta blog y assets
-# De blog tomar index.html y pegarlo en myfirstapp/templates/myfirstapp/
+# De blog tomar index.html y pegarlo en myfirstapp/templates/myfirstapp/ el archivo index.html existente lo renombraremos para no perder el archivo original ejemplo index2.html
 # Luego crear una carpeta llamada Static y dentro crear una carpeta llamada myfirstapp e insertar la carpeta assets y los archivos de blog blog.css blog.rtl.css
 
 # En el archivo Settings.py agregar la ruta a los archivos estaticos
